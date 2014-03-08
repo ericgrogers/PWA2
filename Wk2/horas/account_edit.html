@@ -2,28 +2,36 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title><!-- PLACE YOUR TITLE HERE --></title>
-<link rel="stylesheet" type="text/css" href="<!-- PLACE YOUR CSS LINK HERE -->">
+<title>horas professional time management | edit my account</title>
+<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
 <body>
 	<header>
-		<nav> <!-- DON'T FORGET YOUR NAVIGATION -->
+		<h1 id="p_header">Edit My Account</h1>
+		<nav> 
 			<ul>
-			<li><a href="#"></a></li>
-			<li><a href="#"></a></li>
-			<li><a href="#"></a></li>
-			<li><a href="#"></a></li>
-			<li><a href="#"></a></li>
-			<li><a href="#"></a></li>
+			<li><a href="#">Change</a></li>
+			<li><a href="#">Cancel</a></li>
 			</ul>
 		</nav>
 	</header>
 	
+	<form id="edit_account" method="post" action="#">
+
+		<label for="a_name">Username:</label>
+		<input type="text" name="a_name" id="a_name">
+		<div id="e_msg1"></div>
+		
+			<label for="a_password">New Password:</label>
+		<input type="text" name="a_password" id="a_password">
+		<div id="e_msg2"></div>
+		
+			<label for="a_email">New e-mail:</label>
+		<input type="text" name="a_email" id="a_email">
+		<div id="e_msg3"></div>
+		
+	</form>
 	
-	<footer>
-		<!-- A GOOD PLACE FOR COPYRIGHT INFO -->
-	</footer>
-	<script src="<-- link to javascript here -->"></script>
 </body>
 </html>

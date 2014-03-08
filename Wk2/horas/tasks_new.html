@@ -2,28 +2,53 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title><!-- PLACE YOUR TITLE HERE --></title>
-<link rel="stylesheet" type="text/css" href="<!-- PLACE YOUR CSS LINK HERE -->">
+<title>horas professional time management | new task</title>
+<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
 <body>
 	<header>
-		<nav> <!-- DON'T FORGET YOUR NAVIGATION -->
+		<h1 id="p_header">New Task</h1>
+		<nav> 
 			<ul>
-			<li><a href="#"></a></li>
-			<li><a href="#"></a></li>
-			<li><a href="#"></a></li>
-			<li><a href="#"></a></li>
-			<li><a href="#"></a></li>
-			<li><a href="#"></a></li>
+			<li><a href="#">Add</a></li>
+			<li><a href="#">Cancel</a></li>
 			</ul>
 		</nav>
 	</header>
 	
+	<form id="add_task" method="post" action="#">
+
+		<label for="t_name">Task Name:</label>
+		<input type="text" name="t_name" id="t_name">
+		<div id="e_msg1"></div>
+		
+		<label for="t_date">Due Date:</label>
+		<input type="text" name="t_date" id="t_date">
+		<div id="e_msg2"></div>
+		
+		<label for="t_priority">Priority:</label>
+		<select id="t_priority">
+			<option>Normal</option>
+			<option>Urgent</option>
+			<option>Delayed</option>
+			<option>Completed</option>
+		</select>
+		
+		<label for="t_description">Description:</label>
+		<textarea id="t_description"></textarea>
 	
-	<footer>
-		<!-- A GOOD PLACE FOR COPYRIGHT INFO -->
-	</footer>
-	<script src="<-- link to javascript here -->"></script>
+	</form>
+		
+		<div id="t_status">
+			<p>Completed</p>
+			<p>Active</p>
+			<p>Canceled</p>
+			<p>Status:</p>
+			<img id="com_img" src="images/completed.gif" alt="Completed" />
+			<img id="a_img" src="images/active.gif" alt="Active" />
+			<img id="can_img" src="images/canceled.gif" alt="Canceled" />
+		</div>
+	
 </body>
 </html>

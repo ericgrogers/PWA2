@@ -2,28 +2,57 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title><!-- PLACE YOUR TITLE HERE --></title>
-<link rel="stylesheet" type="text/css" href="<!-- PLACE YOUR CSS LINK HERE -->">
+<title>horas professional time management | Add Project</title>
+<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
 <body>
 	<header>
-		<nav> <!-- DON'T FORGET YOUR NAVIGATION -->
+		<h1 id="p_header">Add Project</h1>
+		<nav> 
 			<ul>
-			<li><a href="#"></a></li>
-			<li><a href="#"></a></li>
-			<li><a href="#"></a></li>
-			<li><a href="#"></a></li>
-			<li><a href="#"></a></li>
-			<li><a href="#"></a></li>
+			<li><a href="#">Add</a></li>
+			<li><a href="#">Cancel</a></li>
 			</ul>
 		</nav>
 	</header>
 	
+	<form id="add_project" method="post" action="#">
+
+		<label for="p_name">Project Name:</label>
+		<input type="text" name="p_name" id="p_name">
+		<div id="e_msg1"></div>
+		
+		<label for="p_date">Due Date:</label>
+		<input type="text" name="p_date" id="p_date">
+		<div id="e_msg2"></div>
+		
+		<label for="p_priority">Priority:</label>
+		<select id="p_priority">
+			<option>Normal</option>
+			<option>Urgent</option>
+			<option>Delayed</option>
+			<option>Completed</option>
+		</select>
+		
+		<label for="p_description">Description:</label>
+		<textarea id="p_description"></textarea>
 	
+	</form>
+		
+		<div id="p_status">
+			<p>Completed</p>
+			<p>Active</p>
+			<p>Canceled</p>
+			<p>Status:</p>
+			<img id="com_img" src="images/completed.gif" alt="Completed" />
+			<img id="a_img" src="images/active.gif" alt="Active" />
+			<img id="can_img" src="images/canceled.gif" alt="Canceled" />
+		</div>
+			
 	<footer>
-		<!-- A GOOD PLACE FOR COPYRIGHT INFO -->
+		<p class="copyright">Copyright 2014&copy; horas professional time management.</p>
 	</footer>
-	<script src="<-- link to javascript here -->"></script>
+	
 </body>
 </html>

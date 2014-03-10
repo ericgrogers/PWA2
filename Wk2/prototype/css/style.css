@@ -31,6 +31,7 @@ body {
 }
 
 header {
+	margin: 0;
 	background-image: url('../images/header.png');
 	width: 960px;
 	height: 200px;
@@ -58,7 +59,43 @@ h3 {
 	color: #1a9af5;
 }
 
-/*============== Landing Page ==================*/
+#new_btn {
+	clear: right;
+	font-size: 18px;
+	width: 100px;
+	height: 30px;
+	color: #fff;
+	background-color: #1a9af5;
+	border: none;
+	margin: 30px 30px 0 0;
+	float: right;
+}
+
+#new_btn:hover {
+	background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0, #0E74B8),
+	color-stop(1, #1A9AF5)
+);
+background-image: -o-linear-gradient(bottom, #0E74B8 0%, #1A9AF5 100%);
+background-image: -moz-linear-gradient(bottom, #0E74B8 0%, #1A9AF5 100%);
+background-image: -webkit-linear-gradient(bottom, #0E74B8 0%, #1A9AF5 100%);
+background-image: -ms-linear-gradient(bottom, #0E74B8 0%, #1A9AF5 100%);
+background-image: linear-gradient(to bottom, #0E74B8 0%, #1A9AF5 100%);
+}
+
+/*-------------- Footer ------------*/
+
+footer {
+	clear: left;
+	margin-left: 30px;
+}
+
+
+/*=======================================================================
+========================= Landing Page ================================*/
 
 .tagline {
 	margin-top: 130px;
@@ -334,13 +371,214 @@ background-image: linear-gradient(to bottom, #D67322 0%, #FF9035 100%);
 	
 }
 
-/*-------------- Footer ------------*/
-
-footer {
-	clear: left;
-	margin-left: 30px;
-}
-
 /*======================== Projects Page =====================*/
 
+/*-------------- header ------------*/
+
+#welcome_msg {
+	float: left;
+	margin: 100px 0 0 0;	
+}
+
+#top_nav {
+	margin: 30px 30px 0 0;
+	float: right;
+}
+
+.my_account {
+	color: #1a9af5;
+	font-size: 18px;
+	margin: 0 30px 0 0;
+	float: left;
+}
+
+.logout {
+	color: #1a9af5;
+	font-size: 18px;
+	float: left;
+}
+
+#project_header {
+	clear: right;
+	display: block;
+	margin: 50px 30px 10px 0;
+	float: right;
+}
+
+#calendar {
+	float: right;
+	clear: right;
+	width: 50px;
+	height: 50px;
+	margin: 0 30px 0 0;
+}
+
+/*-------------- Projects ------------*/
+
+/*-------------- Project table ------------*/
+
+.project {
+	clear: both;
+	margin: 0 30px 0 30px;
+	width: 900px;
+	height: 98px;
+}
+
+.status {
+	width: 100px;
+	height: 100px;
+	float: left;
+}
+
+.project_tbl {
+	width: 700px;
+	height: 100px;
+	margin-bottom: 30px;
+	border-collapse: collapse;
+	border: 1px solid #4d4d4d;
+		background-image: url('../images/stripes_50.png');
+	float: left;
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
+}
+
+.project_tbl:hover {
+	box-shadow: 0 0 5px #1a9af5;
+	
+}
+
+td {
+	padding: 0;
+}
+
+#proj_pdp {
+	height: 28px;
+}
+
+#prof_ddp {
+	height: 68px;
+}
+
+#proj_name {
+	width: 330px;
+	height: 28px;
+	background: #fff;
+}
+
+#proj_dd {
+	width: 200px;
+	height: 30px;
+}
+
+#proj_prior {
+	width: 170px;
+	height: 30px;
+}
+
+#proj_desc {
+	width: 300px;
+	height: auto;
+	background: #fff;
+}
+
+#proj_date {
+	width: 200px;
+	height: 68px;
+}
+
+.edit_delete {
+	width: 98px;
+	height: 98px;
+	border: 1px solid #4d4d4d;
+	background: #badcf5;
+	float: right;
+}
+
+.proj_edit {
+	width: 80px;
+	height: 30px;
+	color: #fff;
+	background: #1a9af5;
+	border: none;
+	margin: 10px 10px;
+}
+
+.proj_edit:hover {
+		background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0, #0E74B8),
+	color-stop(1, #1A9AF5)
+);
+background-image: -o-linear-gradient(bottom, #0E74B8 0%, #1A9AF5 100%);
+background-image: -moz-linear-gradient(bottom, #0E74B8 0%, #1A9AF5 100%);
+background-image: -webkit-linear-gradient(bottom, #0E74B8 0%, #1A9AF5 100%);
+background-image: -ms-linear-gradient(bottom, #0E74B8 0%, #1A9AF5 100%);
+background-image: linear-gradient(to bottom, #0E74B8 0%, #1A9AF5 100%);
+
+}
+
+.proj_delete {
+	width: 80px;
+	height: 30px;
+	color: #fff;
+	background: #ff9135;
+	border: none;
+	margin: 12px 10px;
+}
+
+.proj_delete:hover {
+	background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0, #D67322),
+	color-stop(1, #FF9035)
+);
+background-image: -o-linear-gradient(bottom, #D67322 0%, #FF9035 100%);
+background-image: -moz-linear-gradient(bottom, #D67322 0%, #FF9035 100%);
+background-image: -webkit-linear-gradient(bottom, #D67322 0%, #FF9035 100%);
+background-image: -ms-linear-gradient(bottom, #D67322 0%, #FF9035 100%);
+background-image: linear-gradient(to bottom, #D67322 0%, #FF9035 100%);
+	
+}
+
+/*-------------- Project tool tip ------------*/
+
+.project:hover .tooltip1 {
+	opacity: 1;
+}
+
+.tooltip1 {
+	width: 120px;
+	height: 10px;
+    background: #1a9af5;
+    color: #fff;
+    margin: 0;
+    padding: 10px;
+    position: relative;
+    left: 250px;
+    opacity: 0;
+    -webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+.tooltip1:after {
+    border-color: #1a9af5 rgba(0, 0, 0, 0);
+    border-style: solid;
+    border-width: 15px 15px 0;
+    bottom: -15px;
+    content: "";
+    display: block;
+    left: 50px;
+    position: absolute;
+    width: 0;
+}
+
+/*======================= Add Project Flyout =====================*/
 

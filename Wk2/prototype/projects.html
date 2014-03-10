@@ -8,36 +8,44 @@
 
 <body>
 	<header>
+	
 		<h1><img src="images/logo.png" alt="horas" /></h1>
+	
 		<h2 id="welcome_msg">Welcome User!</h2>
 		
-		<a href="#">My Account</a>
-		<a href="#">Logout</a>
+		<div id="top_nav">
+			<a class="my_account" href="#">My Account</a>
+			<a class="logout" href="#">Logout</a>
+		</div>
 		
-		<h2>Projects</h2>
-		<img src="images/calendar.png" alt="Calendar" />
+		<h2 id="project_header">Projects</h2>
+		
+		<img id="calendar" src="images/calendar.png" alt="Calendar" />
 
 	</header>
 	
-	<button class="new_btn">New +</button>
+	<button id="new_btn">New +</button>
 	
 	<div class="project">
+	<p class="tooltip1">Click to view Tasks</p>
 	
 		<img class="status" src="images/completed.gif" alt="Completed" />
-	
+		
 		<table class="project_tbl">
 		
-			<tr>
-				<td>Project Name:</td>
-				<td>Due Date:</td>
-				<td>Priority:</td>
+			<tr id="proj_pdp">
+				<td id="proj_name">Project Name:</td>
+				<td id="proj_dd">Due Date:</td>
+				<td id="proj_prior">Priority:</td>
 			</tr>
-			<tr>
-				<td>Brief Description:</td>
-				<td>MM/DD/YYYY</td>
-				<td>user input</td>
+			<tr id="proj_ddp">
+				<td id="proj_desc">Brief Description: </td>
+				<td id="proj_date">MM/DD/YYYY</td>
+				<td id="proj_prior2">user input</td>
 			</tr>
 		</table>
+		
+		
 		<div class="edit_delete">
 			<button class="proj_edit">Edit</button>
 			<button class="proj_delete">Delete</button>
@@ -47,6 +55,5 @@
 	<footer>
 		<p class="copyright">Copyright 2014&copy; horas professional time management.</p>
 	</footer>
-	
 </body>
 </html>

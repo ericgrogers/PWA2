@@ -122,6 +122,99 @@ background-image: -ms-linear-gradient(bottom, #0E74B8 0%, #1A9AF5 100%);
 background-image: linear-gradient(to bottom, #0E74B8 0%, #1A9AF5 100%);
 }
 
+/*-------------- Projects/Tasks tables ------------*/
+
+td {
+	padding: 0;
+}
+
+.r_name {
+	width: 330px;
+	height: 28px;
+	background: #fff;
+	border-right: 2px solid #4d4d4d;
+}
+
+.r_duedate {
+	width: 200px;
+	height: 30px;
+}
+
+.r_priority {
+	width: 170px;
+	height: 30px;
+}
+
+.r_description {
+	width: 300px;
+	height: auto;
+	background: #fff;
+	border-right: 2px solid #4d4d4d;
+}
+
+.r_date {
+	width: 200px;
+	height: 68px;
+}
+
+.edit_delete {
+	width: 98px;
+	height: 98px;
+	border: 1px solid #4d4d4d;
+	background: #badcf5;
+	float: right;
+}
+
+.edit_btn {
+	width: 80px;
+	height: 30px;
+	color: #fff;
+	background: #1a9af5;
+	border: none;
+	margin: 10px 10px;
+}
+
+.edit_btn:hover {
+		background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0, #0E74B8),
+	color-stop(1, #1A9AF5)
+);
+background-image: -o-linear-gradient(bottom, #0E74B8 0%, #1A9AF5 100%);
+background-image: -moz-linear-gradient(bottom, #0E74B8 0%, #1A9AF5 100%);
+background-image: -webkit-linear-gradient(bottom, #0E74B8 0%, #1A9AF5 100%);
+background-image: -ms-linear-gradient(bottom, #0E74B8 0%, #1A9AF5 100%);
+background-image: linear-gradient(to bottom, #0E74B8 0%, #1A9AF5 100%);
+
+}
+
+.delete_btn {
+	width: 80px;
+	height: 30px;
+	color: #fff;
+	background: #ff9135;
+	border: none;
+	margin: 12px 10px;
+}
+
+.delete_btn:hover {
+	background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0, #D67322),
+	color-stop(1, #FF9035)
+);
+background-image: -o-linear-gradient(bottom, #D67322 0%, #FF9035 100%);
+background-image: -moz-linear-gradient(bottom, #D67322 0%, #FF9035 100%);
+background-image: -webkit-linear-gradient(bottom, #D67322 0%, #FF9035 100%);
+background-image: -ms-linear-gradient(bottom, #D67322 0%, #FF9035 100%);
+background-image: linear-gradient(to bottom, #D67322 0%, #FF9035 100%);
+	
+}
+
 /*-------------- Footer ------------*/
 
 footer {
@@ -439,6 +532,7 @@ background-image: linear-gradient(to bottom, #D67322 0%, #FF9035 100%);
 .status {
 	width: 100px;
 	height: 100px;
+	margin-top: 30px;
 	float: left;
 }
 
@@ -462,105 +556,6 @@ background-image: linear-gradient(to bottom, #D67322 0%, #FF9035 100%);
 	
 }
 
-td {
-	padding: 0;
-}
-
-#proj_pdp {
-	height: 28px;
-}
-
-#prof_ddp {
-	height: 68px;
-}
-
-#proj_name {
-	width: 330px;
-	height: 28px;
-	background: #fff;
-	border-right: 2px solid #4d4d4d;
-}
-
-#proj_dd {
-	width: 200px;
-	height: 30px;
-}
-
-#proj_prior {
-	width: 170px;
-	height: 30px;
-}
-
-#proj_desc {
-	width: 300px;
-	height: auto;
-	background: #fff;
-	border-right: 2px solid #4d4d4d;
-}
-
-#proj_date {
-	width: 200px;
-	height: 68px;
-}
-
-.edit_delete {
-	width: 98px;
-	height: 98px;
-	border: 1px solid #4d4d4d;
-	background: #badcf5;
-	float: right;
-}
-
-.proj_edit {
-	width: 80px;
-	height: 30px;
-	color: #fff;
-	background: #1a9af5;
-	border: none;
-	margin: 10px 10px;
-}
-
-.proj_edit:hover {
-		background-image: -webkit-gradient(
-	linear,
-	left top,
-	left bottom,
-	color-stop(0, #0E74B8),
-	color-stop(1, #1A9AF5)
-);
-background-image: -o-linear-gradient(bottom, #0E74B8 0%, #1A9AF5 100%);
-background-image: -moz-linear-gradient(bottom, #0E74B8 0%, #1A9AF5 100%);
-background-image: -webkit-linear-gradient(bottom, #0E74B8 0%, #1A9AF5 100%);
-background-image: -ms-linear-gradient(bottom, #0E74B8 0%, #1A9AF5 100%);
-background-image: linear-gradient(to bottom, #0E74B8 0%, #1A9AF5 100%);
-
-}
-
-.proj_delete {
-	width: 80px;
-	height: 30px;
-	color: #fff;
-	background: #ff9135;
-	border: none;
-	margin: 12px 10px;
-}
-
-.proj_delete:hover {
-	background-image: -webkit-gradient(
-	linear,
-	left top,
-	left bottom,
-	color-stop(0, #D67322),
-	color-stop(1, #FF9035)
-);
-background-image: -o-linear-gradient(bottom, #D67322 0%, #FF9035 100%);
-background-image: -moz-linear-gradient(bottom, #D67322 0%, #FF9035 100%);
-background-image: -webkit-linear-gradient(bottom, #D67322 0%, #FF9035 100%);
-background-image: -ms-linear-gradient(bottom, #D67322 0%, #FF9035 100%);
-background-image: linear-gradient(to bottom, #D67322 0%, #FF9035 100%);
-	
-}
-
 /*-------------- Project tool tip ------------*/
 
 .project:hover .tooltip1 {
@@ -568,14 +563,15 @@ background-image: linear-gradient(to bottom, #D67322 0%, #FF9035 100%);
 }
 
 .tooltip1 {
-	width: 120px;
+/* 	width: 120px; */
+	display: inline-block;
 	height: 10px;
     background: #1a9af5;
     color: #fff;
     margin: 0;
     padding: 10px;
     position: relative;
-    left: 250px;
+    left: 100px;
     opacity: 0;
     -webkit-transition: all .5s ease;
 	-moz-transition: all .5s ease;
@@ -606,13 +602,60 @@ background-image: linear-gradient(to bottom, #D67322 0%, #FF9035 100%);
 	float: right;
 }
 
-#calendar {
-	float: right;
-	clear: right;
-	width: 50px;
-	height: 50px;
-	margin: 0 30px 0 0;
+/*-------------- Tasks table ------------*/
+
+.task {
+	clear: both;
+	margin: 0 30px 0 30px;
+	width: 900px;
+	height: 98px;
 }
+
+.status {
+	width: 100px;
+	height: 100px;
+	float: left;
+}
+
+.task_tbl {
+	text-indent: 20px;
+	width: 700px;
+	height: 100px;
+	margin-bottom: 30px;
+	border-collapse: collapse;
+	border: 1px solid #4d4d4d;
+		background-image: url('../images/stripes_50.png');
+	float: left;
+}
+
+.task_n {
+	width: 330px;
+	height: 28px;
+	background: #fff;
+	border-right: 2px solid #4d4d4d;
+}
+
+.task_desc {
+	width: 330px;
+	height: 28px;
+	background: #fff;
+	border-right: 2px solid #4d4d4d;
+}
+
+.project_name {
+	text-align: center;
+	min-width: 100px;
+    background: #1a9af5;
+    color: #fff;
+    display: inline-block;
+    border-radius: 5px 5px 0 0;
+    margin: 0;
+    padding: 8px;
+    line-height: 1;
+    position: relative;
+    left: 100px;
+}
+
 
 
 /*======================= Add Project Flyout =====================*/

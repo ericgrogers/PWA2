@@ -30,7 +30,7 @@ body {
 	margin: 0 auto;
 }
 
-header {
+.page_header {
 	margin: 0;
 	background-image: url('../images/header.png');
 	width: 960px;
@@ -59,6 +59,10 @@ h3 {
 	color: #1a9af5;
 }
 
+li {
+	list-style: none;
+}
+
 /*-------------- logged in welcome message ------------*/
 
 #welcome_msg { 
@@ -66,7 +70,7 @@ h3 {
 	margin: 100px 0 0 0;	
 }
 
-/*-------------- top links ------------*/
+/*-------------- top nav links ------------*/
 
 #top_nav { 
 	margin: 30px 30px 0 0;
@@ -124,6 +128,17 @@ background-image: linear-gradient(to bottom, #0E74B8 0%, #1A9AF5 100%);
 
 /*-------------- Projects/Tasks tables ------------*/
 
+/*-------------- Status image ------------*/
+
+.status {
+	width: 100px;
+	height: 100px;
+	margin-top: 30px;
+	float: left;
+}
+
+/*-------------- Tables ------------*/
+
 td {
 	padding: 0;
 }
@@ -156,6 +171,8 @@ td {
 	width: 200px;
 	height: 68px;
 }
+
+/*-------------- Edit/Delete buttons ------------*/
 
 .edit_delete {
 	width: 98px;
@@ -241,6 +258,8 @@ footer {
 	width: 200px;
 }
 
+/*-------------- Username ------------*/
+
 #li_username {
 	width: 200px;
 	height: 30px;
@@ -270,6 +289,8 @@ footer {
 	background: #fff;
 }
 
+/*-------------- Password ------------*/
+
 #li_password {
 	width: 200px;
 	height: 30px;
@@ -298,6 +319,8 @@ footer {
 	box-shadow: 0 0 10px #1a9af5;
 	background: #fff;
 }
+
+/*-------------- Login button ------------*/
 
 #login_btn {
 	width: 80px;
@@ -383,6 +406,8 @@ text-decoration: underline;
 	color: #ff9135;
 }
 
+/*-------------- Username ------------*/
+
 #su_username {
 	
 	width: 200px;
@@ -412,6 +437,8 @@ text-decoration: underline;
 	box-shadow: 0 0 10px #1a9af5;
 	background: #fff;
 }
+
+/*-------------- Password ------------*/
 
 #su_password {
 	
@@ -443,6 +470,8 @@ text-decoration: underline;
 	background: #fff;
 }
 
+/*-------------- Email address ------------*/
+
 #su_email {
 	
 	width: 200px;
@@ -472,6 +501,8 @@ text-decoration: underline;
 	box-shadow: 0 0 10px #1a9af5;
 	background: #fff;
 }
+
+/*-------------- Signup Button ------------*/
 
 #signup_btn {
 	width: 120px;
@@ -529,13 +560,6 @@ background-image: linear-gradient(to bottom, #D67322 0%, #FF9035 100%);
 	height: 98px;
 }
 
-.status {
-	width: 100px;
-	height: 100px;
-	margin-top: 30px;
-	float: left;
-}
-
 .project_tbl {
 	text-indent: 20px;
 	width: 700px;
@@ -563,13 +587,11 @@ background-image: linear-gradient(to bottom, #D67322 0%, #FF9035 100%);
 }
 
 .tooltip1 {
-/* 	width: 120px; */
 	display: inline-block;
-	height: 10px;
     background: #1a9af5;
     color: #fff;
     margin: 0;
-    padding: 10px;
+    padding: 7px;
     position: relative;
     left: 100px;
     opacity: 0;
@@ -591,9 +613,10 @@ background-image: linear-gradient(to bottom, #D67322 0%, #FF9035 100%);
     width: 0;
 }
 
+/*================================================================*/
 /*======================== Tasks Page ============================*/
 
-/*-------------- header ------------*/
+/*-------------- Header ------------*/
 
 #tasks_header {
 	clear: right;
@@ -656,7 +679,124 @@ background-image: linear-gradient(to bottom, #D67322 0%, #FF9035 100%);
     left: 100px;
 }
 
+/*==================================================================================*/
+/*======================= Flyout Forms Add/Edit Projects/Tasks =====================*/
 
+#flyout_container {
+	width: 600px;
+	margin: 0 auto;
+	border: 1px solid #4d4d4d;
+	background-image: url('../images/stripes_50.png');
+}
 
-/*======================= Add Project Flyout =====================*/
+.flyout_header {
+	height: 50px;
+	border: 5px solid #4d4d4d;
+	background: #1a9af5;
+	color: #fff;
+}
 
+#p_header {
+	height: auto;
+	width: auto;
+	font: 24px 'clementepdambold', sans-serif;
+	margin: 10px 0 10px 30px;
+}
+
+#add_link {
+	font: 18px 'clementepdambold',sans-serif;
+	color: #fff;
+	margin-right: 30px;
+	float: right;
+}
+
+#change_link {
+	font: 18px 'clementepdambold', sans-serif;
+	color: #fff;
+	margin-right: 30px;
+	float: right;
+}
+
+#cancel_link {
+	font: 18px 'clementepdambold', sans-serif;
+	color: #fff;
+	margin-right: 30px;
+	float: right;
+}
+
+.fname_box {
+	float: right;
+	margin-top: 30px;
+}
+
+.f_name_label {
+	font-size: 18px;
+	color: #4d4d4d;
+	margin-right: 30px;
+}
+
+.f_name {
+	margin-right: 30px;
+	width: 400px;
+	height: 30px;
+	float: right;
+}
+
+.fdate_box {
+	float: right;
+	margin-top: 30px;
+}
+
+.f_date_label {
+	font-size: 18px;
+	color: #4d4d4d;
+	margin: 30px;
+}
+
+.f_date {
+	width: 200px;
+	height: 30px;
+	margin-right: 230px;
+	float: right;
+}
+
+.fpriority_box {
+	float: right;
+	margin: 30px 0 0 0;
+}
+
+.f_priority_label {
+	font-size: 18px;
+	color: #4d4d4d;
+	margin-right: 30px;
+	
+}
+
+.f_priority {
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    font-size: 14px;
+    height: 30px;
+    padding: 5px;
+    width: 228px;
+    border: 1px solid #666;
+}
+
+.select_style {
+	background: url('../images/priority_select_normal.gif');
+	overflow: hidden;
+	height: 30px;
+	width: 200px;
+    border-right: 1px solid #4d4d4d;
+    margin-right: 236px;
+    float: right;
+}
+
+.select_style:hover {
+	background: url('../images/priority_select_hover.gif');
+}
+
+.fdescription_box {
+	float: right;
+	width: 400px;
+	height: 100px;
+}

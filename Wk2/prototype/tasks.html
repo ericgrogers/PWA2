@@ -11,11 +11,13 @@
 		<h1><img src="images/logo.png" alt="horas" /></h1>
 		<h2 id="welcome_msg">Welcome User!</h2>
 		
-		<a href="#">Projects</a>
-		<a href="#">My Account</a>
-		<a href="#">Logout</a>
+		<nav id="top_nav">
+			<a class="projects" href="#">Projects</a>
+			<a class="my_account" href="#">My Account</a>
+			<a class="logout" href="#">Logout</a>
+		</nav>
 		
-		<h2>Tasks</h2>
+		<h2 id="tasks_header">Tasks</h2>
 		
 	</header>
 	
@@ -26,23 +28,23 @@
 		<div class="project_name"></div>
 		
 		<img class="status" src="images/completed.gif" alt="Completed" />
-	
+		
 		<table class="task_tbl">
 		
 			<tr>
-				<td>Task Name:</td>
-				<td>Due Date:</td>
-				<td>Priority:</td>
+				<td class="r_name">Task Name:</td>
+				<td class="r_duedate">Due Date:</td>
+				<td class="r_priority">Priority:</td>
 			</tr>
 			<tr>
-				<td>Brief Description:</td>
-				<td>MM/DD/YYYY</td>
-				<td>user input</td>
+				<td class="r_description">Brief Description:</td>
+				<td class="r_date">MM/DD/YYYY</td>
+				<td class="r_prior2">user input</td>
 			</tr>
 		</table>
 		<div class="edit_delete">
-			<button class="task_edit">Edit</button>
-			<button class="task_delete">Delete</button>
+			<button class="edit_btn">Edit</button>
+			<button class="delete_btn">Delete</button>
 		</div>
 	</div>
 	

@@ -59,7 +59,43 @@ h3 {
 	color: #1a9af5;
 }
 
-#new_btn {
+/*-------------- logged in welcome message ------------*/
+
+#welcome_msg { 
+	float: left;
+	margin: 100px 0 0 0;	
+}
+
+/*-------------- top links ------------*/
+
+#top_nav { 
+	margin: 30px 30px 0 0;
+	float: right;
+}
+
+.projects {
+	color: #1a9af5;
+	font-size: 18px;
+	margin: 0 30px 0 0;
+	float: left;
+}
+
+.my_account {
+	color: #1a9af5;
+	font-size: 18px;
+	margin: 0 30px 0 0;
+	float: left;
+}
+
+.logout {
+	color: #1a9af5;
+	font-size: 18px;
+	float: left;
+}
+
+/*-------------- create new project/task ------------*/
+
+#new_btn {	
 	clear: right;
 	font-size: 18px;
 	width: 100px;
@@ -371,32 +407,10 @@ background-image: linear-gradient(to bottom, #D67322 0%, #FF9035 100%);
 	
 }
 
+/*============================================================*/
 /*======================== Projects Page =====================*/
 
 /*-------------- header ------------*/
-
-#welcome_msg {
-	float: left;
-	margin: 100px 0 0 0;	
-}
-
-#top_nav {
-	margin: 30px 30px 0 0;
-	float: right;
-}
-
-.my_account {
-	color: #1a9af5;
-	font-size: 18px;
-	margin: 0 30px 0 0;
-	float: left;
-}
-
-.logout {
-	color: #1a9af5;
-	font-size: 18px;
-	float: left;
-}
 
 #project_header {
 	clear: right;
@@ -412,8 +426,6 @@ background-image: linear-gradient(to bottom, #D67322 0%, #FF9035 100%);
 	height: 50px;
 	margin: 0 30px 0 0;
 }
-
-/*-------------- Projects ------------*/
 
 /*-------------- Project table ------------*/
 
@@ -431,6 +443,7 @@ background-image: linear-gradient(to bottom, #D67322 0%, #FF9035 100%);
 }
 
 .project_tbl {
+	text-indent: 20px;
 	width: 700px;
 	height: 100px;
 	margin-bottom: 30px;
@@ -465,6 +478,7 @@ td {
 	width: 330px;
 	height: 28px;
 	background: #fff;
+	border-right: 2px solid #4d4d4d;
 }
 
 #proj_dd {
@@ -481,6 +495,7 @@ td {
 	width: 300px;
 	height: auto;
 	background: #fff;
+	border-right: 2px solid #4d4d4d;
 }
 
 #proj_date {
@@ -562,10 +577,10 @@ background-image: linear-gradient(to bottom, #D67322 0%, #FF9035 100%);
     position: relative;
     left: 250px;
     opacity: 0;
-    -webkit-transition: all 1s ease;
-	-moz-transition: all 1s ease;
-	-o-transition: all 1s ease;
-	transition: all 1s ease;
+    -webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
 }
 
 .tooltip1:after {
@@ -579,6 +594,26 @@ background-image: linear-gradient(to bottom, #D67322 0%, #FF9035 100%);
     position: absolute;
     width: 0;
 }
+
+/*======================== Tasks Page ============================*/
+
+/*-------------- header ------------*/
+
+#tasks_header {
+	clear: right;
+	display: block;
+	margin: 50px 30px 10px 0;
+	float: right;
+}
+
+#calendar {
+	float: right;
+	clear: right;
+	width: 50px;
+	height: 50px;
+	margin: 0 30px 0 0;
+}
+
 
 /*======================= Add Project Flyout =====================*/
 

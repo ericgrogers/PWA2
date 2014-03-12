@@ -7,7 +7,7 @@
 </head>
 
 <body>
-<div id="flyout_container">
+<div id="accmodal_container">
 	<header class="flyout_header">
 		<h1 id="p_header">Edit My Account</h1>
 		<nav> 
@@ -20,16 +20,16 @@
 	
 	<form id="edit_account" method="post" action="#">
 
-		<label for="a_name">Username:</label>
 		<input type="text" name="a_name" id="a_name">
+		<label class="a_name_label" for="a_name">Username:</label>
 		<div id="e_msg1"></div>
 		
-			<label for="a_password">New Password:</label>
 		<input type="text" name="a_password" id="a_password">
+		<label class="a_pass_label" for="a_password">New Password:</label>
 		<div id="e_msg2"></div>
 		
-			<label for="a_email">New e-mail:</label>
 		<input type="text" name="a_email" id="a_email">
+		<label class="a_email_label" for="a_email">New e-mail:</label>
 		<div id="e_msg3"></div>
 		
 	</form>

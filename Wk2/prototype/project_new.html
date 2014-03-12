@@ -1,4 +1,4 @@
-		<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
@@ -7,18 +7,19 @@
 </head>
 
 <body>
-<div id="flyout_container">
+<div id="modal_container">
 
 	<header class="flyout_header">
 		<h1 id="p_header">New Project</h1>
 		<nav> 
 			<ul>
-			<li><a id="add_link" href="#">Add</a></li>
 			<li><a id="cancel_link" href="#">Cancel</a></li>
+			<li><a id="add_link" href="#">Add</a></li>
 			</ul>
 		</nav>
 	</header>
 	
+	<div class="forms">
 	<form id="add_project" method="post" action="#">
 		<div class="fname_box">
 			<label class="f_name_label" for="f_name">Project Name:</label>
@@ -50,14 +51,15 @@
 		</div>
 	
 	</form>
+	</div><!-- end of forms div -->
 		
 		<div id="f_status">
-			<p>Completed</p>
-			<p>Active</p>
-			<p>Canceled</p>
-			<p>Status:</p>
+			<p id="status">Status:</p>
+			<p id="completed">Completed</p>
+			<p id="active">Active</p>
+			<p id="canceled">Canceled</p>
 			<img id="com_img" src="images/completed.gif" alt="Completed" />
-			<img id="a_img" src="images/active.gif" alt="Active" />
+			<img id="act_img" src="images/active.gif" alt="Active" />
 			<img id="can_img" src="images/canceled.gif" alt="Canceled" />
 		</div>
 </div><!-- end of flyout container -->

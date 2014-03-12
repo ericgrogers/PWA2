@@ -7,49 +7,61 @@
 </head>
 
 <body>
-<div id="flyout_container">
+<div id="modal_container">
+
 	<header class="flyout_header">
 		<h1 id="p_header">Edit Task</h1>
 		<nav> 
 			<ul>
-			<li><a id="change_link"  href="#">Change</a></li>
-			<li><a id="cancel_link"  href="#">Cancel</a></li>
+			<li><a id="cancel_link" href="#">Cancel</a></li>
+			<li><a id="change_link" href="#">Change</a></li>
 			</ul>
 		</nav>
 	</header>
 	
-	<form id="edit_task" method="post" action="#">
-
-		<label for="t_name">Project Name:</label>
-		<input type="text" name="t_name" id="t_name">
-		<div id="e_msg1"></div>
+	<div class="forms">
+	<form id="add_project" method="post" action="#">
+		<div class="fname_box">
+			<label class="f_name_label" for="f_name">Task Name:</label>
+			<input class="f_name" type="text" name="f_name" id="f_name">
+			<div id="e_msg1"></div>
+		</div>
 		
-		<label for="t_date">Due Date:</label>
-		<input type="text" name="t_date" id="t_date">
-		<div id="e_msg2"></div>
+		<div class="fdate_box">
+			<label class="f_date_label" for="f_date">Due Date:</label>
+			<input class="f_date" type="text" name="f_date" id="f_date">
+			<div id="e_msg2"></div>
+		</div>
 		
-		<label for="t_priority">Priority:</label>
-		<select id="t_priority">
-			<option>Normal</option>
-			<option>Urgent</option>
-			<option>Delayed</option>
-			<option>Completed</option>
-		</select>
+		<div class="fpriority_box">
+		<label class="f_priority_label" for="f_priority">Priority:</label>
+		<div class="select_style">
+			<select class="f_priority" id="f_priority">
+				<option class="opt_normal">Normal</option>
+				<option class="opt_urgent">Urgent</option>
+				<option class="opt_delayed">Delayed</option>
+				<option class="opt_completed">Completed</option>
+			</select>
+		</div>
+		</div>
 		
-		<label for="t_description">Description:</label>
-		<textarea id="t_description"></textarea>
+		<div class="fdescription_box">
+			<label class="f_description_label" for="f_description">Description:</label>
+			<textarea class="f_description" id="f_description"></textarea>
+		</div>
 	
 	</form>
+	</div><!-- end of forms div -->
 		
-		<div id="t_status">
-			<p>Completed</p>
-			<p>Active</p>
-			<p>Canceled</p>
-			<p>Status:</p>
+		<div id="f_status">
+			<p id="status">Status:</p>
+			<p id="completed">Completed</p>
+			<p id="active">Active</p>
+			<p id="canceled">Canceled</p>
 			<img id="com_img" src="images/completed.gif" alt="Completed" />
-			<img id="a_img" src="images/active.gif" alt="Active" />
+			<img id="act_img" src="images/active.gif" alt="Active" />
 			<img id="can_img" src="images/canceled.gif" alt="Canceled" />
 		</div>
 </div><!-- end of flyout container -->
-</body>
+	</body>
 </html>

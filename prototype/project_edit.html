@@ -1,39 +1,38 @@
 		<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<title>Edit Project</title>
-<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta charset="utf-8" />
+	<title>Edit Project</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
-<div id="modal_container">
+<div id="modal_container"><!-- start of modal content container -->
 
 	<header class="flyout_header">
 		<h1 id="p_header">Edit Project</h1>
-		<nav> 
+		<nav><!-- start of top right nav -->
 			<ul>
 			<li><a id="cancel_link" href="#">Cancel</a></li>
 			<li><a id="change_link" href="#">Change</a></li>
 			</ul>
-		</nav>
+		</nav><!-- end of top right nav -->
 	</header>
 	
-	<div class="forms">
+	<div class="forms"><!-- start of project edit forms -->
 	<form id="add_project" method="post" action="#">
-		<div class="fname_box">
+		<div class="fname_box"><!-- name -->
 			<label class="f_name_label" for="f_name">Project Name:</label>
 			<input class="f_name" type="text" name="f_name" id="f_name">
-			<div id="e_msg1"></div>
 		</div>
 		
-		<div class="fdate_box">
+		<div class="fdate_box"><!-- due date -->
 			<label class="f_date_label" for="f_date">Due Date:</label>
 			<input class="f_date" type="text" name="f_date" id="f_date">
-			<div id="e_msg2"></div>
 		</div>
 		
-		<div class="fpriority_box">
+		<div class="fpriority_box"><!-- priority -->
 		<label class="f_priority_label" for="f_priority">Priority:</label>
 		<div class="select_style">
 			<select class="f_priority" id="f_priority">
@@ -45,7 +44,7 @@
 		</div>
 		</div>
 		
-		<div class="fdescription_box">
+		<div class="fdescription_box"><!-- description -->
 			<label class="f_description_label" for="f_description">Description:</label>
 			<textarea class="f_description" id="f_description"></textarea>
 		</div>
@@ -53,7 +52,7 @@
 	</form>
 	</div><!-- end of forms div -->
 		
-		<div id="f_status">
+		<div id="f_status"><!-- status descriptions -->
 			<p id="status">Status:</p>
 			<p id="completed">Completed</p>
 			<p id="active">Active</p>
@@ -61,7 +60,7 @@
 			<img id="com_img" src="images/completed.gif" alt="Completed" />
 			<img id="act_img" src="images/active.gif" alt="Active" />
 			<img id="can_img" src="images/canceled.gif" alt="Canceled" />
-		</div>
-</div><!-- end of flyout container -->
+		</div><!-- end of status descriptions -->
+</div><!-- end of modal content container -->
 </body>
 </html>

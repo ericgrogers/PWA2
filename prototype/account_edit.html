@@ -1,38 +1,37 @@
 		<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<title>Edit My Account</title>
-<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta charset="utf-8" />
+	<title>Edit My Account</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
-<div id="accmodal_container">
+<div id="accmodal_container"><!-- start of modal content container -->
 	<header class="flyout_header">
 		<h1 id="p_header">Edit My Account</h1>
-		<nav> 
+		<nav><!-- top right nav -->
 			<ul>
 			<li><a id="change_link" href="#">Change</a></li>
 			<li><a id="cancel_link"  href="#">Cancel</a></li>
 			</ul>
-		</nav>
+		</nav><!-- end of top right nav -->
 	</header>
 	
-	<form id="edit_account" method="post" action="#">
+	<form id="edit_account" method="post" action="#"><!-- start of form -->
 
-		<input type="text" name="a_name" id="a_name">
+		<input type="text" name="a_name" id="a_name"><!-- name -->
 		<label class="a_name_label" for="a_name">Username:</label>
-		<div id="e_msg1"></div>
 		
-		<input type="text" name="a_password" id="a_password">
+		<input type="text" name="a_password" id="a_password"><!-- password -->
 		<label class="a_pass_label" for="a_password">New Password:</label>
-		<div id="e_msg2"></div>
 		
-		<input type="text" name="a_email" id="a_email">
+		<input type="text" name="a_email" id="a_email"><!-- email -->
 		<label class="a_email_label" for="a_email">New e-mail:</label>
 		<div id="e_msg3"></div>
-		
-	</form>
-</div><!-- end of flyout container -->
+	
+	</form><!-- end of form -->
+</div><!-- end of modal content container -->
 </body>
 </html>

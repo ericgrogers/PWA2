@@ -1,36 +1,36 @@
 		<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<title>Tasks</title>
-<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta charset="utf-8" />
+	<title>Tasks</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
 	<header class="page_header">
-		<h1><img src="images/logo.png" alt="horas" /></h1>
-		<h2 id="welcome_msg">Welcome User!</h2>
+		<h1><img src="images/logo.png" alt="horas" /></h1><!-- logo -->
+		<h2 id="welcome_msg">Welcome User!</h2><!-- welcome message -->
 		
-		<nav id="top_nav">
+		<nav id="top_nav"><!-- top right nav -->
 			<a class="projects" href="#">Projects</a>
 			<a class="my_account" href="#">My Account</a>
 			<a class="logout" href="#">Logout</a>
-		</nav>
+		</nav><!-- end of top right nav -->
 		
 		<h2 id="tasks_header">Tasks</h2>
 		
 	</header>
 	
-	<button id="tnew_btn">New +</button>
+	<button id="tnew_btn">New +</button><!-- new task button -->
 	
-	<div class="task">
+	<div class="task"><!-- start of task box -->
 	
 		<p class="project_name">Project Name</p>
 		
-		<img class="tstatus" src="images/completed.gif" alt="Completed" />
+		<img class="tstatus" src="images/completed.gif" alt="Completed" /><!-- status -->
 		
-		<table class="task_tbl">
-		
+		<table class="task_tbl"><!-- start of task table -->
 			<tr>
 				<td class="r_name">Task Name:</td>
 				<td class="r_duedate">Due Date:</td>
@@ -41,12 +41,13 @@
 				<td class="r_date">MM/DD/YYYY</td>
 				<td class="r_prior2">user input</td>
 			</tr>
-		</table>
-		<div class="edit_delete">
+		</table><!-- end of task table -->
+		
+		<div class="edit_delete"><!-- edit and delet buttons -->
 			<button class="edit_btn">Edit</button>
 			<button class="delete_btn">Delete</button>
-		</div>
-	</div>
+		</div><!-- end of edit and delet buttons -->
+	</div><!-- end of task box -->
 	
 	<footer>
 		<p class="copyright">Copyright 2014&copy; horas professional time management.</p>

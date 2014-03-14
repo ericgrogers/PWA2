@@ -231,6 +231,16 @@ footer{
 	visibility: hidden;
 }
 
+.errormsg2 {
+	width: 405px;
+	line-height: 2;
+	text-indent: 10px;
+	margin-left: 165px;
+	background: #ff0000;
+	color: #fff;
+	float: left;
+}
+
 .arrow_errormsg {
 	width: 0px;
 	height: 0px;
@@ -730,7 +740,8 @@ footer{
 .f_name_label{
 	font-size:18px;
 	color:#4d4d4d;
-	margin-right:30px;
+	margin-left: 20px;
+	float: left;
 }
 
 .f_name{
@@ -748,13 +759,14 @@ footer{
 
 .fdate_box{
 	float:right;
-	margin-top:30px;
+
 }
 
 .f_date_label{
 	font-size:18px;
 	color:#4d4d4d;
-	margin:30px;
+	margin-left: 55px;
+	float: left;
 }
 
 .f_date{
@@ -772,7 +784,7 @@ footer{
 
 .fpriority_box{
 	float:right;
-	margin:30px 0 0 0;
+
 }
 
 .f_priority_label{

@@ -12,13 +12,16 @@
 		
 		<!-- start of login form -->
 		<form class="login_form" method="post" action="#">
+			<span class="errormsg">Error</span><!-- username error -->
+			<span class="arrow_errormsg"></span>
 			<input type="text" name="li_username" id="li_username" placeholder="Username">
+			<span class="errormsg">Error</span><!-- username error -->
+			<span class="arrow_errormsg"></span>
 			<input type="text" name="li_password" id="li_password" placeholder="Password">
-			<button id="login_btn">Login</button>
 		</form><!-- end of login form -->
 		
 		<h2 class="tagline">Professional Time Management</h2><!-- tagline -->
-		
+		<button id="login_btn">Login</button>
 	</header>
 	
 	<article id="left_box" class="content_box"><!-- start of the left content box -->
@@ -41,10 +44,17 @@
 		<form class="signup_form" method="post" action="#"><!-- start of the signup form -->
 		
 			<h4>Sign Up for FREE!</h4>
-		
+			
+			<span class="errormsg">Error</span><!-- username error -->
+			<span class="arrow_errormsg"></span>
 			<input type="text" name="su_username" id="su_username" placeholder="Username">
-			<input type="text" name="su_username" id="su_password" placeholder="Password">
+			<span class="errormsg">Error</span><!-- password error -->
+			<span class="arrow_errormsg"></span>
+			<input type="text" name="su_password" id="su_password" placeholder="Password">
+			<span class="errormsg">Error</span><!-- email error -->
+			<span class="arrow_errormsg"></span>		
 			<input type="text" name="su_email" id="su_email" placeholder="E-mail Address">
+			
 			<button id="signup_btn">Sign Up</button>
 		</form><!-- end of the signup form -->
 	</div><!-- end of the right content box -->

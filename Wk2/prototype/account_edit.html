@@ -21,15 +21,17 @@
 	
 	<form id="edit_account" method="post" action="#"><!-- start of form -->
 
-		<input type="text" name="a_name" id="a_name"><!-- name -->
+		<input type="text" name="a_name" id="a_name" placeholder="Enter your current Username"><!-- name -->
 		<label class="a_name_label" for="a_name">Username:</label>
+		<div class="errormsg2">Error</div>
 		
-		<input type="text" name="a_password" id="a_password"><!-- password -->
+		<input type="text" name="a_password" id="a_password" placeholder="Enter your new password"><!-- password -->
 		<label class="a_pass_label" for="a_password">New Password:</label>
+		<div class="errormsg2">Error</div>
 		
-		<input type="text" name="a_email" id="a_email"><!-- email -->
+		<input type="text" name="a_email" id="a_email" placeholder="Enter your new E-mail Address"><!-- email -->
 		<label class="a_email_label" for="a_email">New e-mail:</label>
-		<div id="e_msg3"></div>
+		<div class="errormsg2">Error</div>
 	
 	</form><!-- end of form -->
 </div><!-- end of modal content container -->

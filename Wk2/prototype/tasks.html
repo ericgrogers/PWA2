@@ -1,50 +1,53 @@
 		<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<title>horas professional time management | tasks</title>
-<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta charset="utf-8" />
+	<title>Tasks</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
-	<header>
-		<h1><img src="images/logo.png" alt="horas" /></h1>
-		<h2 id="welcome_msg">Welcome User!</h2>
+	<header class="page_header">
+		<h1><img src="images/logo.png" alt="horas" /></h1><!-- logo -->
+		<h2 id="welcome_msg">Welcome User!</h2><!-- welcome message -->
 		
-		<a href="#">Projects</a>
-		<a href="#">My Account</a>
-		<a href="#">Logout</a>
+		<nav id="top_nav"><!-- top right nav -->
+			<a class="projects" href="#">Projects</a>
+			<a class="my_account" href="#">My Account</a>
+			<a class="logout" href="#">Logout</a>
+		</nav><!-- end of top right nav -->
 		
-		<h2>Tasks</h2>
+		<h2 id="tasks_header">Tasks</h2>
 		
 	</header>
 	
-	<button class="new_btn">New +</button>
+	<button id="tnew_btn">New +</button><!-- new task button -->
 	
-	<div class="task">
+	<div class="task"><!-- start of task box -->
 	
-		<div class="project_name"></div>
+		<p class="project_name">Project Name</p>
 		
-		<img class="status" src="images/completed.gif" alt="Completed" />
-	
-		<table class="task_tbl">
+		<img class="tstatus" src="images/completed.gif" alt="Completed" /><!-- status -->
 		
+		<table class="task_tbl"><!-- start of task table -->
 			<tr>
-				<td>Task Name:</td>
-				<td>Due Date:</td>
-				<td>Priority:</td>
+				<td class="r_name">Task Name:</td>
+				<td class="r_duedate">Due Date:</td>
+				<td class="r_priority">Priority:</td>
 			</tr>
 			<tr>
-				<td>Brief Description:</td>
-				<td>MM/DD/YYYY</td>
-				<td>user input</td>
+				<td class="r_description">Brief Description:</td>
+				<td class="r_date">MM/DD/YYYY</td>
+				<td class="r_prior2">user input</td>
 			</tr>
-		</table>
-		<div class="edit_delete">
-			<button class="task_edit">Edit</button>
-			<button class="task_delete">Delete</button>
-		</div>
-	</div>
+		</table><!-- end of task table -->
+		
+		<div class="edit_delete"><!-- edit and delet buttons -->
+			<button class="edit_btn">Edit</button>
+			<button class="delete_btn">Delete</button>
+		</div><!-- end of edit and delet buttons -->
+	</div><!-- end of task box -->
 	
 	<footer>
 		<p class="copyright">Copyright 2014&copy; horas professional time management.</p>

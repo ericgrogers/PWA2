@@ -1,56 +1,53 @@
 		<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<title>horas professional time management | projects</title>
-<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta charset="utf-8" />
+	<title>Projects</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-
 <body>
-	<header>
+	<header class="page_header">
 	
-		<h1><img src="images/logo.png" alt="horas" /></h1>
+		<h1><img src="images/logo.png" alt="horas" /></h1><!-- logo -->
 	
-		<h2 id="welcome_msg">Welcome User!</h2>
+		<h2 id="welcome_msg">Welcome User!</h2><!-- wecome message -->
 		
-		<div id="top_nav">
+		<nav id="top_nav"><!-- top right nav -->
 			<a class="my_account" href="#">My Account</a>
 			<a class="logout" href="#">Logout</a>
-		</div>
+		</nav><!-- end of top right nav -->
 		
 		<h2 id="project_header">Projects</h2>
 		
-		<img id="calendar" src="images/calendar.png" alt="Calendar" />
+		<img id="calendar" src="images/calendar.png" alt="Calendar" /><!-- calendar view link -->
 
 	</header>
 	
-	<button id="new_btn">New +</button>
+	<button id="pnew_btn">New +</button><!-- create new project button -->
 	
-	<div class="project">
-	<p class="tooltip1">Click to view Tasks</p>
+	<div class="project"><!-- beginning of the project box -->
 	
-		<img class="status" src="images/completed.gif" alt="Completed" />
+		<img class="status" src="images/completed.gif" alt="Completed" /><!-- status -->
 		
-		<table class="project_tbl">
-		
-			<tr id="proj_pdp">
-				<td id="proj_name">Project Name:</td>
-				<td id="proj_dd">Due Date:</td>
-				<td id="proj_prior">Priority:</td>
+		<table class="project_tbl"><!-- project table -->
+			<tr>
+				<td class="r_name">Project Name:</td>
+				<td class="r_duedate">Due Date:</td>
+				<td class="r_priority">Priority:</td>
 			</tr>
-			<tr id="proj_ddp">
-				<td id="proj_desc">Brief Description: </td>
-				<td id="proj_date">MM/DD/YYYY</td>
-				<td id="proj_prior2">user input</td>
+			<tr>
+				<td class="r_description">Brief Description: </td>
+				<td class="r_date">MM/DD/YYYY</td>
+				<td class="r_prior2">user input</td>
 			</tr>
-		</table>
+		</table><!-- end of project table -->
 		
-		
-		<div class="edit_delete">
-			<button class="proj_edit">Edit</button>
-			<button class="proj_delete">Delete</button>
-		</div>
-	</div>
+		<div class="edit_delete"><!-- edit and delete options -->
+			<button class="edit_btn">Edit</button>
+			<button class="delete_btn">Delete</button>
+		</div><!-- end of edit and delete options -->
+	</div><!-- end of project box -->
 	
 	<footer>
 		<p class="copyright">Copyright 2014&copy; horas professional time management.</p>

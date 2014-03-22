@@ -1,0 +1,418 @@
+<!-- 
+	horas professional time management
+	Author: Eric Rogers
+-->
+
+<div>
+
+    <!-- Application UI/ Projects Dashboard ------------
+    -------------------------------------------------->
+
+	<script type="text/template" id="template_app">
+	
+		<!-- core application skeleton html -->
+        <header class="page_header">
+
+            <h1><img src="images/logo.png" alt="horas" /></h1><!-- logo -->
+
+            <h2 id="welcome_msg">Welcome User!</h2><!-- wecome message -->
+
+            <nav id="top_nav"><!-- top right nav -->
+                <a class="my_account" href="#">My Account</a>
+                <a class="logout" href="#">Logout</a>
+            </nav><!-- end of top right nav -->
+
+            <h2 id="project_header">Projects</h2>
+
+            <img id="calendar" src="images/calendar.png" alt="Calendar" /><!-- calendar view link -->
+
+        </header>
+
+        <button id="pnew_btn" title="Click to add a new project.">New +</button><!-- create new project button -->
+
+        <div class="projects"><!-- beginning of the project box -->
+
+        </div><!-- end of the projects box -->
+
+	
+	</script>
+
+    <!------------ Project Template -------------------------
+    -------------------------------------------------------->
+    <script type="text/template" id="template_projects">
+
+        <div class="project">
+        <div class="status"></div><!-- status -->
+
+        <table class="project_tbl"><!-- project table -->
+            <tr>
+                <td class="r_name" title="Click to view tasks for this project.">Project Name:
+                    {{=projectName}}</td>
+                <td class="r_duedate">Due Date:</td>
+                <td class="r_priority">Priority:</td>
+            </tr>
+            <tr>
+                <td class="r_description">Brief Description: <span class="descrip_text">{{=projectDescription}}</span></td>
+                <td class="r_date">{{=dueDate}}</td>
+                <td class="r_prior2">{{=status}}</td>
+            </tr>
+        </table><!-- end of project table -->
+
+        <div class="edit_delete"><!-- edit and delete options -->
+            <button id="blank" class="edit_btn" title="Click to edit this project.">Edit</button>
+            <button id="blank" class="delete_btn" title="Click to delete this project.">Delete</button>
+        </div><!-- end of edit and delete options -->
+        </div><!-- end of project wrapper -->
+
+    </script>
+
+    <!------------ New Project Template --------------------
+    ----------------------------------------------------->
+
+    <script type="text/template" id="template_project_new">
+        <div id="overlay">
+        <div id="modal_container"><!-- container for the modal content -->
+
+            <header class="flyout_header">
+                <h1 id="p_header">New Project</h1>
+                <nav> <!-- start of the top right nav -->
+                    <ul>
+                        <li><a id="cancel_link" href="#">Cancel</a></li>
+                        <li><a id="add_link" href="#">Add</a></li>
+                    </ul>
+                </nav><!-- end of the top right nav -->
+            </header>
+
+            <div class="forms"><!-- start of the new project forms -->
+                <form id="add_project" method="post" action="#">
+                    <div class="fname_box"><!-- name -->
+                        <label class="f_name_label" for="f_name">Project Name:</label>
+                        <input class="f_name" type="text" name="f_name" id="f_name" placeholder="Enter the Project Name.">
+                        <div class="errormsg2">Error</div>
+                    </div>
+
+                    <div class="fdate_box"><!-- due date -->
+                        <label class="f_date_label" for="f_date">Due Date:</label>
+                        <input class="f_date" type="text" name="f_date" id="f_date" placeholder="Choose a Due Date.">
+                        <div class="errormsg2">Error</div>
+                    </div>
+
+                    <div class="fpriority_box"><!-- priority -->
+                        <label class="f_priority_label" for="f_priority">Priority:</label>
+                        <div class="select_style">
+                            <select class="f_priority" id="f_priority">
+                                <option class="opt_normal">Normal</option>
+                                <option class="opt_urgent">Urgent</option>
+                                <option class="opt_canceled">Canceled</option>
+                                <option class="opt_completed">Completed</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="fdescription_box"><!-- description -->
+                        <label class="f_description_label" for="f_description">Description:</label>
+                        <textarea class="f_description" id="f_description" placeholder="Enter a brief description."></textarea>
+                    </div>
+                </form>
+            </div><!-- end of forms div -->
+
+            <div id="f_status"><!-- status descriptions -->
+                <p id="status">Status:</p>
+                <p id="completed">Completed</p>
+                <p id="active">Active</p>
+                <p id="canceled">Canceled</p>
+                <img id="com_img" src="images/completed.gif" alt="Completed" />
+                <img id="act_img" src="images/active.gif" alt="Active" />
+                <img id="can_img" src="images/canceled.gif" alt="Canceled" />
+            </div><!-- end of status descriptions -->
+        </div><!-- end of modal content container -->
+        </div><!-- end of overlay container -->
+    </script>
+
+    <!------------ Project Edit Template -------------------
+    ------------------------------------------------------->
+
+    <script type="text/template" id="template_project_edit">
+        <div id="overlay">
+        <div id="modal_container"><!-- start of modal content container -->
+
+            <header class="flyout_header">
+                <h1 id="p_header">Edit Project</h1>
+                <nav><!-- start of top right nav -->
+                    <ul>
+                        <li><a id="cancel_link" href="#">Cancel</a></li>
+                        <li><a id="change_link" href="#">Change</a></li>
+                    </ul>
+                </nav><!-- end of top right nav -->
+            </header>
+
+            <div class="forms"><!-- start of project edit forms -->
+                <form id="add_project" method="post" action="#">
+                    <div class="fname_box"><!-- name -->
+                        <label class="f_name_label" for="f_name">Project Name:</label>
+                        <input class="f_name" type="text" name="f_name" id="f_name" placeholder="Enter the Project Name.">
+                        <div class="errormsg2">Error</div>
+                    </div>
+
+                    <div class="fdate_box"><!-- due date -->
+                        <label class="f_date_label" for="f_date">Due Date:</label>
+                        <input class="f_date" type="text" name="f_date" id="f_date" placeholder="Choose a Due Date.">
+                        <div class="errormsg2">Error</div>
+                    </div>
+
+                    <div class="fpriority_box"><!-- priority -->
+                        <label class="f_priority_label" for="f_priority">Priority:</label>
+                        <div class="select_style">
+                            <select class="f_priority" id="f_priority">
+                                <option class="opt_normal">Normal</option>
+                                <option class="opt_urgent">Urgent</option>
+                                <option class="opt_canceled">Canceled</option>
+                                <option class="opt_completed">Completed</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="fdescription_box"><!-- description -->
+                        <label class="f_description_label" for="f_description">Description:</label>
+                        <textarea class="f_description" id="f_description" placeholder="Enter a brief description."></textarea>
+                    </div>
+
+                </form>
+            </div><!-- end of forms div -->
+
+            <div id="f_status"><!-- status descriptions -->
+                <p id="status">Status:</p>
+                <p id="completed">Completed</p>
+                <p id="active">Active</p>
+                <p id="canceled">Canceled</p>
+                <img id="com_img" src="images/completed.gif" alt="Completed" />
+                <img id="act_img" src="images/active.gif" alt="Active" />
+                <img id="can_img" src="images/canceled.gif" alt="Canceled" />
+            </div><!-- end of status descriptions -->
+        </div><!-- end of modal content container -->
+        </div><!-- end of overlay container -->
+    </script>
+
+    <!------------ Task Page Template ---------------------
+    ------------------------------------------------------>
+
+	<script type="text/template" id="template_task">
+        <header class="page_header">
+            <h1><img src="images/logo.png" alt="horas" /></h1><!-- logo -->
+            <h2 id="welcome_msg">Welcome User!</h2><!-- welcome message -->
+
+            <nav id="top_nav"><!-- top right nav -->
+                <a class="projects" href="#">Projects</a>
+                <a class="my_account" href="#">My Account</a>
+                <a class="logout" href="#">Logout</a>
+            </nav><!-- end of top right nav -->
+
+            <h2 id="tasks_header">Tasks</h2>
+
+        </header>
+
+        <button id="tnew_btn" title="Click to add a new task to this project.">New +</button><!-- new task button -->
+
+         <div class="tasks"></div><!-- end of tasks div -->
+
+
+        <footer>
+            <p class="copyright">Copyright 2014&copy; horas professional time management.</p>
+        </footer>
+    </script>
+
+    <!------------ Display Tasks Template -----------------
+    ------------------------------------------------------>
+
+    <script type="text/template" id="template_display_tasks">
+        <div class="task"><!-- start of task box -->
+        <p class="project_name">{{=projectName}}</p>
+
+        <div class="status"></div> <!-- status -->
+
+        <table class="task_tbl"><!-- start of task table -->
+            <tr>
+                <td class="r_name">{{=taskName}}</td>
+                <td class="r_duedate">Due Date:</td>
+                <td class="r_priority">Priority:</td>
+            </tr>
+            <tr>
+                <td class="r_description">Brief Description:
+                    <span class="descrip_text">{{=taskDescription}}</span></td>
+                <td class="r_date">{{=dueDate}}</td>
+                <td class="r_prior2">{{=status}}</td>
+            </tr>
+        </table><!-- end of task table -->
+
+        <div class="edit_delete"><!-- edit and delete buttons -->
+            <button class="edit_btn" title="Click to edit this task.">Edit</button>
+            <button class="delete_btn" title="Click to delete this task.">Delete</button>
+        </div><!-- end of edit and delete buttons -->
+        </div><!-- end of task box -->
+    </script>
+
+	<!------------ New Task Template ----------------------
+	------------------------------------------------------>
+
+	<script type="text/template" id="template_task_new">
+        <div id="overlay">
+        <div id="modal_container"><!-- start of modal content container -->
+
+            <header class="flyout_header">
+                <h1 id="p_header">New Task</h1>
+                <nav><!-- top right nav -->
+                    <ul>
+                        <li><a id="cancel_link" href="#">Cancel</a></li>
+                        <li><a id="add_link" href="#">Add</a></li>
+                    </ul>
+                </nav><!-- end of top right nav -->
+            </header>
+
+            <div class="forms"><!-- start of new task form -->
+                <form id="add_project" method="post" action="#">
+                    <div class="fname_box"><!-- name -->
+                        <label class="f_name_label" for="f_name">Task Name:</label>
+                        <input class="f_name" type="text" name="f_name" id="f_name" placeholder="Enter a Task Name.">
+                        <div class="errormsg2">Error</div>
+                    </div>
+
+                    <div class="fdate_box"><!-- due date -->
+                        <label class="f_date_label" for="f_date">Due Date:</label>
+                        <input class="f_date" type="text" name="f_date" id="f_date" placeholder="Choose a Due Date.">
+                        <div class="errormsg2">Error</div>
+                    </div>
+
+                    <div class="fpriority_box"><!-- priority -->
+                        <label class="f_priority_label" for="f_priority">Priority:</label>
+                        <div class="select_style">
+                            <select class="f_priority" id="f_priority">
+                                <option class="opt_normal">Normal</option>
+                                <option class="opt_urgent">Urgent</option>
+                                <option class="opt_canceled">Canceled</option>
+                                <option class="opt_completed">Completed</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="fdescription_box"><!-- description -->
+                        <label class="f_description_label" for="f_description">Description:</label>
+                        <textarea class="f_description" id="f_description" placeholder="Enter a brief description."></textarea>
+                    </div>
+
+                </form>
+            </div><!-- end of forms div -->
+
+            <div id="f_status"><!-- status descriptions -->
+                <p id="status">Status:</p>
+                <p id="completed">Completed</p>
+                <p id="active">Active</p>
+                <p id="canceled">Canceled</p>
+                <img id="com_img" src="images/completed.gif" alt="Completed" />
+                <img id="act_img" src="images/active.gif" alt="Active" />
+                <img id="can_img" src="images/canceled.gif" alt="Canceled" />
+            </div><!-- end of status descriptions -->
+        </div><!-- end of modal content container -->
+	    </div><!-- end of overlay container -->
+    </script>
+
+    <!------------- Edit Task Template ---------------------
+    ------------------------------------------------------->
+
+    <script type="text/template" id="template_task_edit">
+        <div id="overlay">
+        <div id="modal_container"><!-- start of modal content container -->
+
+            <header class="flyout_header">
+                <h1 id="p_header">Edit Task</h1>
+                <nav> <!-- top right nav -->
+                    <ul>
+                        <li><a id="cancel_link" href="#">Cancel</a></li>
+                        <li><a id="change_link" href="#">Change</a></li>
+                    </ul>
+                </nav><!-- end of top right nav -->
+            </header>
+
+            <div class="forms"><!-- start of edit task form -->
+                <form id="add_project" method="post" action="#">
+                    <div class="fname_box"><!-- name -->
+                        <label class="f_name_label" for="f_name">Task Name:</label>
+                        <input class="f_name" type="text" name="f_name" id="f_name" placeholder="Enter a Task Name.">
+                        <div class="errormsg2">Error</div>
+                    </div>
+
+                    <div class="fdate_box"><!-- due date -->
+                        <label class="f_date_label" for="f_date">Due Date:</label>
+                        <input class="f_date" type="text" name="f_date" id="f_date" placeholder="Choose a Due Date.">
+                        <div class="errormsg2">Error</div>
+                    </div>
+
+                    <div class="fpriority_box"><!-- priority -->
+                        <label class="f_priority_label" for="f_priority">Priority:</label>
+                        <div class="select_style">
+                            <select class="f_priority" id="f_priority">
+                                <option class="opt_normal">Normal</option>
+                                <option class="opt_urgent">Urgent</option>
+                                <option class="opt_canceled">Canceled</option>
+                                <option class="opt_completed">Completed</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="fdescription_box"><!-- description -->
+                        <label class="f_description_label" for="f_description">Description:</label>
+                        <textarea class="f_description" id="f_description" placeholder="Enter a brief description."></textarea>
+                    </div>
+
+                </form>
+            </div><!-- end of form div -->
+
+            <div id="f_status"><!-- status descriptions -->
+                <p id="status">Status:</p>
+                <p id="completed">Completed</p>
+                <p id="active">Active</p>
+                <p id="canceled">Canceled</p>
+                <img id="com_img" src="images/completed.gif" alt="Completed" />
+                <img id="act_img" src="images/active.gif" alt="Active" />
+                <img id="can_img" src="images/canceled.gif" alt="Canceled" />
+            </div><!-- end of status descriptions -->
+        </div><!-- end of modal content container -->
+        </div><!-- end of overlay container -->
+    </script>
+
+    <!------------ Edit Account Template -------------------
+    ------------------------------------------------------->
+
+    <script type="text/template" id="template_account_edit">
+        <div id="overlay">
+        <div id="accmodal_container"><!-- start of modal content container -->
+            <header class="flyout_header">
+                <h1 id="p_header">Edit My Account</h1>
+                <nav><!-- top right nav -->
+                    <ul>
+                        <li><a id="change_link" href="#">Change</a></li>
+                        <li><a id="cancel_link"  href="#">Cancel</a></li>
+                    </ul>
+                </nav><!-- end of top right nav -->
+            </header>
+
+            <form id="edit_account" method="post" action="#"><!-- start of form -->
+
+                <input type="text" name="a_name" id="a_name" placeholder="Enter your current Username"><!-- name -->
+                <label class="a_name_label" for="a_name">Username:</label>
+                <div class="errormsg2">Error</div>
+
+                <input type="password" name="a_password" id="a_password"
+                       placeholder="Enter your new password"><!-- password -->
+                <label class="a_pass_label" for="a_password">New Password:</label>
+                <div class="errormsg2">Error</div>
+
+                <input type="text" name="a_email" id="a_email" placeholder="Enter your new E-mail Address"><!-- email -->
+                <label class="a_email_label" for="a_email">New e-mail:</label>
+                <div class="errormsg2">Error</div>
+
+            </form><!-- end of form -->
+        </div><!-- end of modal content container -->
+        </div><!-- end of overlay container -->
+    </script>
+	
+</div>

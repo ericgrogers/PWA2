@@ -1,0 +1,1078 @@
+/* -----------------------------------------
+      horas professional time management
+--------------------------------------------
+      Author: Eric Rogers
+------------------------------------------*/
+
+/*-------------- Fonts -----------------------*/
+
+@font-face{
+	font-family:'clementepdambold';
+	src:url('../fonts/clementepdam-bold.eot');
+	src:url('../fonts/clementepdam-bold.eot?#iefix') format('embedded-opentype'),         url('../fonts/clementepdam-bold.woff') format('woff'),         url('../fonts/clementepdam-bold.ttf') format('truetype'),         url('../fonts/clementepdam-bold.svg#clementepdambold') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+
+/*-------------- Site Wide Styles ------------*/
+
+body{
+	font:14px "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light",	Helvetica, "Arial Narrow", "Lucida Grande", sans-serif;
+	background-image:url('../images/binding_light.png');
+	color:#4d4d4d;
+	max-width:960px;
+	margin:0 auto;
+}
+
+.page_header{
+	margin:0;
+	background-image:url('../images/header.png');
+	width:960px;
+	height:200px;
+}
+
+h1{
+	margin:35px 0 0 30px;
+	width:400px;
+	height:200px;
+	float:left;
+}
+
+h1 img{
+	width:400px;
+	height:200px;
+}
+
+h2{
+	font:24px 'clementepdambold',sans-serif;
+	color:#1a9af5;
+}
+
+h3{
+	font:18px 'clementepdambold',sans-serif;
+	color:#1a9af5;
+}
+
+li{
+	list-style:none;
+}
+
+/*-------------- logged in welcome message ------------*/
+
+#welcome_msg{
+	float:left;
+	margin:100px 0 0 0;
+}
+
+/*-------------- top nav links ------------*/
+
+#top_nav{
+	margin:30px 30px 0 0;
+	float:right;
+}
+
+.projects{
+	color:#1a9af5;
+	font-size:18px;
+	margin:0 30px 0 0;
+	float:left;
+}
+
+.my_account{
+	color:#1a9af5;
+	font-size:18px;
+	margin:0 30px 0 0;
+	float:left;
+}
+
+.logout{
+	color:#1a9af5;
+	font-size:18px;
+	float:left;
+}
+
+/*-------------- Projects/Tasks tables ------------*/
+
+/*-------------- Status images ------------*/
+
+.Normal{
+	width:100px;
+	height:100px;
+    background: url(../images/active.gif);
+	float:left;
+}
+
+.Urgent{
+    width: 100px;
+    height: 100px;
+    background: url(../images/active.gif);
+    float: left;
+}
+
+.Canceled{
+    width: 100px;
+    height: 100px;
+    background: url(../images/canceled.gif);
+    float: left;
+}
+
+.Completed {
+    width: 100px;
+    height: 100px;
+    background: url(../images/completed.gif);
+    float: left;
+}
+
+.tNormal{
+    width:100px;
+    height:100px;
+    margin-top: 30px;
+    background: url(../images/active.gif);
+    float:left;
+}
+
+.tUrgent{
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+    background: url(../images/active.gif);
+    float: left;
+}
+
+.tCanceled{
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+    background: url(../images/canceled.gif);
+    float: left;
+}
+
+.tCompleted {
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+    background: url(../images/completed.gif);
+    float: left;
+}
+
+
+/*-------------- Tables ------------*/
+
+td{
+	padding:0;
+}
+
+.r_name{
+	width:330px;
+	height:28px;
+    text-indent: 10px;
+    font-size: 18px;
+    color: #1a9af5;
+	background:#fff;
+	border-right:2px solid #4d4d4d;
+}
+
+.r_duedate{
+	width:200px;
+	height:30px;
+    color: #1a9af5;
+    font-size: 18px;
+}
+
+.r_priority{
+	width:170px;
+	height:30px;
+    color: #1a9af5;
+    font-size: 18px;
+}
+
+.r_description{
+	width:300px;
+	height:30px;
+    text-indent: 0;
+    padding:0 10px 10px 10px;
+    color: #1a9af5;
+    font-size: 18px;
+	background:#fff;
+	border-right:2px solid #4d4d4d;
+}
+
+.descrip_text {
+    font-size: 14px;
+    color: #4d4d4d;
+}
+
+.r_date{
+	width:200px;
+	height:68px;
+}
+
+
+/*-------------- Edit/Delete buttons ------------*/
+
+.edit_delete{
+	width:98px;
+	height:98px;
+	border:1px solid #4d4d4d;
+	background:#badcf5;
+	float:right;
+}
+
+.edit_btn{
+	width:80px;
+	height:30px;
+	color:#fff;
+	background:#1a9af5;
+	border:none;
+	margin:10px 10px;
+}
+
+.edit_btn:hover{
+	background-image:-webkit-gradient(	linear,	left top,	left bottom,	color-stop(0, #0E74B8),	color-stop(1, #1A9AF5));
+	background-image:-o-linear-gradient(bottom, #0E74B8 0%, #1A9AF5 100%);
+	background-image:-moz-linear-gradient(bottom, #0E74B8 0%, #1A9AF5 100%);
+	background-image:-webkit-linear-gradient(bottom, #0E74B8 0%, #1A9AF5 100%);
+	background-image:-ms-linear-gradient(bottom, #0E74B8 0%, #1A9AF5 100%);
+	background-image:linear-gradient(to bottom, #0E74B8 0%, #1A9AF5 100%);
+}
+
+.delete_btn{
+	width:80px;
+	height:30px;
+	color:#fff;
+	background:#ff9135;
+	border:none;
+	margin:12px 10px;
+}
+
+.delete_btn:hover{
+	background-image:-webkit-gradient(	linear,	left top,	left bottom,	color-stop(0, #D67322),	color-stop(1, #FF9035));
+	background-image:-o-linear-gradient(bottom, #D67322 0%, #FF9035 100%);
+	background-image:-moz-linear-gradient(bottom, #D67322 0%, #FF9035 100%);
+	background-image:-webkit-linear-gradient(bottom, #D67322 0%, #FF9035 100%);
+	background-image:-ms-linear-gradient(bottom, #D67322 0%, #FF9035 100%);
+	background-image:linear-gradient(to bottom, #D67322 0%, #FF9035 100%);
+}
+
+/*-------------- Footer ------------*/
+
+footer{
+	clear:left;
+	margin-left:30px;
+}
+
+/*-------------- Tool Tip ------------*/
+
+
+.ui-tooltip-content{
+	background:#1a9af5;
+	color:#fff;
+	margin:0;
+	padding:10px;
+}
+
+.ui-tooltip:after{
+	border-color:#1a9af5 rgba(0, 0, 0, 0);
+	border-style:solid;
+	border-width:15px 15px 0;
+	bottom:-15px;
+	content:"";
+	display:block;
+    left: 100px;
+    -webkit-position: absolute;
+	position:absolute;
+	width:0;
+}
+
+
+/*-------------- Error Messages ------------*/
+
+.errormsg {
+	width: 180px;
+	margin: 0 0 20px 30px;
+	color: #fff;
+	background: #ff0000;
+	line-height: 2.15;
+	text-align: right;
+	float: left;
+	visibility: hidden;
+}
+
+.errormsg2 {
+	width: 405px;
+	line-height: 2;
+	text-indent: 10px;
+	margin-left: 165px;
+	background: #ff0000;
+	color: #fff;
+	float: left;
+	visibility: hidden;
+}
+
+.arrow_errormsg {
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 15px 0 15px 26px;
+	border-color: transparent transparent transparent #ff0000;
+	float: left;
+	visibility: hidden;
+}
+
+/*-------------- No Projects/Tasks to Display ----------------*/
+
+.noshow {
+    margin-top: 30px;
+    font-size: 24px;
+    color: #1a9af5;
+    padding: 10px;
+    background: url(../images/stripes_10.png);
+    border: 3px solid #4d4d4d;
+    box-shadow: 3px 3px 5px rgba(51, 51, 51, 0.5);
+    text-align: left;
+}
+
+/*=======================================================================
+========================= Landing Page ================================*/
+
+.tagline{
+	font-size:18px;
+    position: relative;
+    top: -30px;
+	color:#072363;
+	float:left;
+}
+
+/*-------------- Login Form ------------*/
+
+.login_form{
+	float:right;
+	margin-top:30px;
+	width:470px;
+}
+
+/*-------------- Username ------------*/
+
+#li_username{
+	width:200px;
+	height:30px;
+	margin-bottom:30px;
+	text-indent:10px;
+	background-image:-webkit-gradient(	linear,	left top,	left bottom,	color-stop(0.25, #FFFFFF),	color-stop(1, #C9E4F7));
+	background-image:-o-linear-gradient(bottom, #FFFFFF 25%, #C9E4F7 100%);
+	background-image:-moz-linear-gradient(bottom, #FFFFFF 25%, #C9E4F7 100%);
+	background-image:-webkit-linear-gradient(bottom, #FFFFFF 25%, #C9E4F7 100%);
+	background-image:-ms-linear-gradient(bottom, #FFFFFF 25%, #C9E4F7 100%);
+	background-image:linear-gradient(to bottom, #FFFFFF 25%, #C9E4F7 100%);
+	border:1px solid #1a9af5;
+	-webkit-transition:all .5s ease;
+	-moz-transition:all .5s ease;
+	-o-transition:all .5s ease;
+	transition:all .5s ease;
+}
+
+#li_username:hover, #li_username:focus{
+	-webkit-box-shadow:0 0 10px #1a9af5;
+	-moz-box-shadow:0 0 10px #1a9af5;
+	box-shadow:0 0 10px #1a9af5;
+	background:#fff;
+}
+
+/*-------------- Password ------------*/
+
+#li_password{
+	width:200px;
+	height:30px;
+	margin-bottom:20px;
+	text-indent:10px;
+	background-image:-webkit-gradient(	linear,	left top,	left bottom,	color-stop(0.25, #FFFFFF),	color-stop(1, #C9E4F7));
+	background-image:-o-linear-gradient(bottom, #FFFFFF 25%, #C9E4F7 100%);
+	background-image:-moz-linear-gradient(bottom, #FFFFFF 25%, #C9E4F7 100%);
+	background-image:-webkit-linear-gradient(bottom, #FFFFFF 25%, #C9E4F7 100%);
+	background-image:-ms-linear-gradient(bottom, #FFFFFF 25%, #C9E4F7 100%);
+	background-image:linear-gradient(to bottom, #FFFFFF 25%, #C9E4F7 100%);
+	border:1px solid #1a9af5;
+	-webkit-transition:all .5s ease;
+	-moz-transition:all .5s ease;
+	-o-transition:all .5s ease;
+	transition:all .5s ease;
+}
+
+#li_password:hover, #li_password:focus{
+	-webkit-box-shadow:0 0 10px #1a9af5;
+	-moz-box-shadow:0 0 10px #1a9af5;
+	box-shadow:0 0 10px #1a9af5;
+	background:#fff;
+}
+
+/*-------------- Login button ------------*/
+
+#login_btn{
+	width:80px;
+	height:20px;
+	color:#fff;
+	background:#1a9af5;
+	border:none;
+	padding:0;
+	margin-right: 30px;
+	float:right;
+}
+
+#login_btn:hover{
+	background-image:-webkit-gradient(	linear,	left top,	left bottom,	color-stop(0, #0E74B8),	color-stop(1, #1A9AF5));
+	background-image:-o-linear-gradient(bottom, #0E74B8 0%, #1A9AF5 100%);
+	background-image:-moz-linear-gradient(bottom, #0E74B8 0%, #1A9AF5 100%);
+	background-image:-webkit-linear-gradient(bottom, #0E74B8 0%, #1A9AF5 100%);
+	background-image:-ms-linear-gradient(bottom, #0E74B8 0%, #1A9AF5 100%);
+	background-image:linear-gradient(to bottom, #0E74B8 0%, #1A9AF5 100%);
+}
+
+/*-------------- Left side Box ------------*/
+
+#left_box{
+	margin:30px;
+	width:400px;
+	height:300px;
+	border:5px solid #1a9af5;
+	background-image:url('../images/stripes_10.png');
+	float:left;
+	clear:left;
+}
+
+#left_box h2{
+	text-align:center;
+	margin-top:10px;
+}
+
+#left_box p{
+	padding:0 30px;
+}
+
+#left_box span{
+	color:#ff9135;
+	text-decoration:underline;
+}
+
+/*-------------- Right side Box ------------*/
+
+#right_box{
+	margin-top:30px;
+	width:470px;
+	height:300px;
+	float:left;
+	border:5px solid #1a9af5;
+	background-image:url('../images/cta_img.gif');
+}
+
+#right_box h3{
+	width: 470px;
+	text-align:center;
+	margin-top:10px;
+}
+
+/*-------------- Signup Form ------------*/
+
+.signup_form{
+	width:470px;
+}
+
+.signup_form h4{
+	margin:0 0 20px 0;
+	width: 470px;
+	text-indent: 240px;
+	font:18px "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light",	Helvetica, "Arial Narrow", "Lucida Grande", sans-serif;
+	color:#ff9135;
+	clear: both;
+}
+
+/*-------------- Username ------------*/
+
+#su_username{
+	width:200px;
+	height:30px;
+	margin: 0 30px 20px 0;
+	text-indent:10px;
+	float: left;
+	background-image:-webkit-gradient(	linear,	left top,	left bottom,	color-stop(0.25, #FFFFFF),	color-stop(1, #C9E4F7));
+	background-image:-o-linear-gradient(bottom, #FFFFFF 25%, #C9E4F7 100%);
+	background-image:-moz-linear-gradient(bottom, #FFFFFF 25%, #C9E4F7 100%);
+	background-image:-webkit-linear-gradient(bottom, #FFFFFF 25%, #C9E4F7 100%);
+	background-image:-ms-linear-gradient(bottom, #FFFFFF 25%, #C9E4F7 100%);
+	background-image:linear-gradient(to bottom, #FFFFFF 25%, #C9E4F7 100%);
+	border:1px solid #1a9af5;
+	-webkit-transition:all .5s ease;
+	-moz-transition:all .5s ease;
+	-o-transition:all .5s ease;
+	transition:all .5s ease;
+}
+
+#su_username:hover, #su_username:focus{
+	-webkit-box-shadow:0 0 10px #1a9af5;
+	-moz-box-shadow:0 0 10px #1a9af5;
+	box-shadow:0 0 10px #1a9af5;
+	background:#fff;
+}
+
+/*-------------- Password ------------*/
+
+#su_password{
+	width:200px;
+	height:30px;
+	margin-bottom: 20px;
+	text-indent:10px;
+	float: left;
+	background-image:-webkit-gradient(	linear,	left top,	left bottom,	color-stop(0.25, #FFFFFF),	color-stop(1, #C9E4F7));
+	background-image:-o-linear-gradient(bottom, #FFFFFF 25%, #C9E4F7 100%);
+	background-image:-moz-linear-gradient(bottom, #FFFFFF 25%, #C9E4F7 100%);
+	background-image:-webkit-linear-gradient(bottom, #FFFFFF 25%, #C9E4F7 100%);
+	background-image:-ms-linear-gradient(bottom, #FFFFFF 25%, #C9E4F7 100%);
+	background-image:linear-gradient(to bottom, #FFFFFF 25%, #C9E4F7 100%);
+	border:1px solid #1a9af5;
+	-webkit-transition:all .5s ease;
+	-moz-transition:all .5s ease;
+	-o-transition:all .5s ease;
+	transition:all .5s ease;
+}
+
+#su_password:hover, #su_password:focus{
+	-webkit-box-shadow:0 0 10px #1a9af5;
+	-moz-box-shadow:0 0 10px #1a9af5;
+	box-shadow:0 0 10px #1a9af5;
+	background:#fff;
+}
+
+/*-------------- Email address ------------*/
+
+#su_email{
+	width:200px;
+	height:30px;
+	margin-bottom: 20px;
+	text-indent:10px;
+	float: left;
+	background-image:-webkit-gradient(	linear,	left top,	left bottom,	color-stop(0.25, #FFFFFF),	color-stop(1, #C9E4F7));
+	background-image:-o-linear-gradient(bottom, #FFFFFF 25%, #C9E4F7 100%);
+	background-image:-moz-linear-gradient(bottom, #FFFFFF 25%, #C9E4F7 100%);
+	background-image:-webkit-linear-gradient(bottom, #FFFFFF 25%, #C9E4F7 100%);
+	background-image:-ms-linear-gradient(bottom, #FFFFFF 25%, #C9E4F7 100%);
+	background-image:linear-gradient(to bottom, #FFFFFF 25%, #C9E4F7 100%);
+	border:1px solid #1a9af5;
+	-webkit-transition:all .5s ease;
+	-moz-transition:all .5s ease;
+	-o-transition:all .5s ease;
+	transition:all .5s ease;
+}
+
+#su_email:hover, #su_email:focus{
+	-webkit-box-shadow:0 0 10px #1a9af5;
+	-moz-box-shadow:0 0 10px #1a9af5;
+	box-shadow:0 0 10px #1a9af5;
+	background:#fff;
+}
+
+/*-------------- Signup Button ------------*/
+
+#signup_btn{
+	width:120px;
+	height:30px;
+	margin-right: 30px;
+	font:18px "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light",	Helvetica, "Arial Narrow", "Lucida Grande", sans-serif;
+	float:right;
+	border:none;
+	background:#ff9135;
+	color:#fff;
+}
+
+#signup_btn:hover{
+	background-image:-webkit-gradient(	linear,	left top,	left bottom,	color-stop(0, #D67322),	color-stop(1, #FF9035));
+	background-image:-o-linear-gradient(bottom, #D67322 0%, #FF9035 100%);
+	background-image:-moz-linear-gradient(bottom, #D67322 0%, #FF9035 100%);
+	background-image:-webkit-linear-gradient(bottom, #D67322 0%, #FF9035 100%);
+	background-image:-ms-linear-gradient(bottom, #D67322 0%, #FF9035 100%);
+	background-image:linear-gradient(to bottom, #D67322 0%, #FF9035 100%);
+}
+
+/*============================================================*/
+/*======================== Projects Page =====================*/
+
+/*-------------- header ------------*/
+
+#project_header{
+	clear:right;
+	display:block;
+	margin:50px 30px 10px 0;
+	float:right;
+}
+
+#calendar{
+	float:right;
+	clear:right;
+	width:50px;
+	height:50px;
+	margin:0 30px 0 0;
+}
+
+/*-------------- New + Button ------------*/
+
+#pnew_btn{
+	clear:right;
+	font-size:18px;
+	width:100px;
+	height:30px;
+	color:#fff;
+	background-color:#1a9af5;
+	border:none;
+	margin:30px 30px 30px 0;
+	float:right;
+}
+
+#pnew_btn:hover{
+	background-image:-webkit-gradient(	linear,	left top,	left bottom,	color-stop(0, #0E74B8),	color-stop(1, #1A9AF5));
+	background-image:-o-linear-gradient(bottom, #0E74B8 0%, #1A9AF5 100%);
+	background-image:-moz-linear-gradient(bottom, #0E74B8 0%, #1A9AF5 100%);
+	background-image:-webkit-linear-gradient(bottom, #0E74B8 0%, #1A9AF5 100%);
+	background-image:-ms-linear-gradient(bottom, #0E74B8 0%, #1A9AF5 100%);
+	background-image:linear-gradient(to bottom, #0E74B8 0%, #1A9AF5 100%);
+}
+
+/*-------- If no Projects to display ----*/
+
+#no_projects {
+    display: inline-block;
+    background: url('../images/stripes_50.png'), url('../images/olay_bg.gif');
+    border: 3px solid #4d4d4d;
+    padding: 10px;
+    font-size: 24px;
+    color: #4d4d4d;
+    margin-bottom: 30px;
+}
+
+/*-------------- Project table ------------*/
+
+.project{
+	clear:both;
+	margin:0 30px 0 30px;
+	width:900px;
+	height:98px;
+}
+
+.project_tbl{
+	text-indent:20px;
+	width:700px;
+	height:100px;
+	margin-bottom:30px;
+	border-collapse:collapse;
+	border:1px solid #4d4d4d;
+	background:url('../images/stripes_50.png'), url('../images/olay_bg.gif');
+	float:left;
+	-webkit-transition:all .5s ease;
+	-moz-transition:all .5s ease;
+	-o-transition:all .5s ease;
+	transition:all .5s ease;
+}
+
+.project_tbl:hover{
+	-webkit-box-shadow:0 0 5px #1a9af5;
+	-moz-box-shadow:0 0 5px #1a9af5;
+	box-shadow:0 0 5px #1a9af5;
+}
+
+/*================================================================*/
+/*======================== Tasks Page ============================*/
+
+/*-------------- Header ------------*/
+
+#tasks_header{
+	clear:right;
+	display:block;
+	margin:50px 30px 10px 0;
+	float:right;
+}
+
+/*-------------- New + Button ------------*/
+
+#tnew_btn{
+	clear:right;
+	font-size:18px;
+	width:100px;
+	height:30px;
+	color:#fff;
+	background-color:#1a9af5;
+	border:none;
+	margin:30px 30px 0 0;
+	float:right;
+}
+
+#tnew_btn:hover{
+	background-image:-webkit-gradient(	linear,	left top,	left bottom,	color-stop(0, #0E74B8),	color-stop(1, #1A9AF5));
+	background-image:-o-linear-gradient(bottom, #0E74B8 0%, #1A9AF5 100%);
+	background-image:-moz-linear-gradient(bottom, #0E74B8 0%, #1A9AF5 100%);
+	background-image:-webkit-linear-gradient(bottom, #0E74B8 0%, #1A9AF5 100%);
+	background-image:-ms-linear-gradient(bottom, #0E74B8 0%, #1A9AF5 100%);
+	background-image:linear-gradient(to bottom, #0E74B8 0%, #1A9AF5 100%);
+}
+
+/*-------------- Tasks table ------------*/
+
+.task{
+	clear:both;
+	margin:0 30px 0 30px;
+	width:900px;
+	height:98px;
+}
+
+.tstatus{
+	width:100px;
+	height:100px;
+	float:left;
+	margin-top:30px;
+}
+
+.task_tbl{
+	text-indent:20px;
+	width:700px;
+	height:100px;
+	margin-bottom:30px;
+	border-collapse:collapse;
+	border:1px solid #4d4d4d;
+	background:url('../images/stripes_50.png'), url('../images/olay_bg.gif');
+	float:left;
+}
+
+.task_n{
+	width:330px;
+	height:28px;
+	background:#fff;
+	border-right:2px solid #4d4d4d;
+}
+
+.task_desc{
+	width:330px;
+	height:28px;
+	background:#fff;
+	border-right:2px solid #4d4d4d;
+}
+
+.project_name{
+	text-align:center;
+	min-width:100px;
+	background:#1a9af5;
+	color:#fff;
+	display:inline-block;
+	-webkit-border-radius:5px 5px 0 0;
+	-moz-border-radius:5px 5px 0 0;
+	border-radius:5px 5px 0 0;
+	margin:0;
+	padding:8px;
+	line-height:1;
+	position:relative;
+	left:100px;
+}
+
+/*==================================================================================*/
+/*======================= Modal Forms Add/Edit Projects/Tasks =====================*/
+
+#overlay {
+    background: rgba(51,51,51,0.3);
+    opacity: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#modal_container{
+	width:600px;
+	height:600px;
+	margin:0 auto;
+	border:1px solid #4d4d4d;
+	background: url('../images/stripes_50.png'), url('../images/olay_bg.gif');
+	-webkit-box-shadow:0 3px 30px #333;
+	-moz-box-shadow:0 3px 30px #333;
+	box-shadow:0 3px 30px #333;
+    z-index: 1001;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*-------------- Header ------------*/
+
+.flyout_header{
+	height:50px;
+	border:5px solid #4d4d4d;
+	background:#1a9af5;
+	color:#fff;
+}
+
+#p_header{
+	height:auto;
+	width:auto;
+	font:24px 'clementepdambold', sans-serif;
+	margin:10px 0 10px 30px;
+}
+
+#add_link{
+	font:18px 'clementepdambold',sans-serif;
+	color:#fff;
+	margin-right:30px;
+	float:right;
+}
+
+#change_link{
+	font:18px 'clementepdambold', sans-serif;
+	color:#fff;
+	margin-right:30px;
+	float:right;
+}
+
+#cancel_link{
+	font:18px 'clementepdambold', sans-serif;
+	color:#fff;
+	margin-right:30px;
+	float:right;
+}
+
+/*-------------- Forms ------------*/
+
+.forms{
+	width:600px;
+	height:330px;
+	clear:both;
+}
+
+.fname_box{
+	float:right;
+	margin-top:30px;
+}
+
+.f_name_label{
+	font-size:18px;
+	color:#4d4d4d;
+	margin-left: 20px;
+	float: left;
+}
+
+.f_name{
+	margin-right:30px;
+	width:400px;
+	height:30px;
+	text-indent: 10px;
+	float:right;
+}
+
+.f_name:hover{
+	-webkit-box-shadow:0 0 10px #1a9af5;
+	-moz-box-shadow:0 0 10px #1a9af5;
+	box-shadow:0 0 10px #1a9af5;
+}
+
+.fdate_box{
+	float:right;
+
+}
+
+.f_date_label{
+	font-size:18px;
+	color:#4d4d4d;
+	margin-left: 55px;
+	float: left;
+}
+
+.f_date{
+	width:200px;
+	height:30px;
+	margin-right:230px;
+	text-indent: 10px;
+	float:right;
+}
+
+.f_date:hover{
+	-webkit-box-shadow:0 0 10px #1a9af5;
+	-moz-box-shadow:0 0 10px #1a9af5;
+	box-shadow:0 0 10px #1a9af5;
+}
+
+.fpriority_box{
+	float:right;
+
+}
+
+.f_priority_label{
+	font-size:18px;
+	color:#4d4d4d;
+	margin-right:30px;
+}
+
+.f_priority{
+	background:none repeat scroll 0 0 rgba(0, 0, 0, 0);
+	font-size:14px;
+	height:30px;
+	padding:5px;
+	width:228px;
+	border:1px solid #666;
+}
+
+.select_style{
+	background:url('../images/priority_select_normal.gif');
+	overflow:hidden;
+	height:30px;
+	width:200px;
+	border-right:1px solid #4d4d4d;
+	margin-right:234px;
+	float:right;
+}
+
+.select_style:hover{
+	background:url('../images/priority_select_hover.gif');
+	-webkit-box-shadow:0 0 10px #1a9af5;
+	-moz-box-shadow:0 0 10px #1a9af5;
+	box-shadow:0 0 10px #1a9af5;
+}
+
+.fdescription_box{
+	float:right;
+	margin:30px 32px 0 0;
+	clear:both;
+}
+
+.f_description_label{
+	font-size:18px;
+	color:#4d4d4d;
+	margin-right:28px;
+	vertical-align:top;
+}
+
+.f_description{
+	width:400px;
+	height:100px;
+	text-indent: 10px;
+}
+
+.f_description:hover{
+	-webkit-box-shadow:0 0 10px #1a9af5;
+	-moz-box-shadow:0 0 10px #1a9af5;
+	box-shadow:0 0 10px #1a9af5;
+}
+
+.f_status{
+	width:400px;
+	height:240px;
+	float:right;
+	margin:30px 30px 0 0;
+}
+
+#status{
+	width:100px;
+	text-align:right;
+	color:#4d4d4d;
+	font-size:18px;
+	margin-left:35px;
+	float:left;
+}
+
+#completed{
+	width:100px;
+	color:#4d4d4d;
+	font-size:18px;
+	text-align:center;
+	margin-left:35px;
+	float:left;
+}
+
+#active{
+	width:100px;
+	color:#4d4d4d;
+	font-size:18px;
+	text-align:center;
+	margin-left:33px;
+	float:left;
+}
+
+#canceled{
+	width:100px;
+	color:#4d4d4d;
+	font-size:18px;
+	text-align:center;
+	margin-left:33px;
+	float:left;
+}
+
+#com_img{
+	width:100px;
+	height:100px;
+	margin:0 0 30px 170px;
+}
+
+#act_img{
+	width:100px;
+	height:100px;
+	margin:0 0 30px 33px;
+}
+
+#can_img{
+	width:100px;
+	height:100px;
+	margin:0 0 30px 33px;
+}
+
+/*=================================================================
+==================== Edit Account Modal ==========================*/
+
+#accmodal_container{
+	width:600px;
+	height:325px;
+	margin:0 auto;
+    position: absolute;
+	border:1px solid #4d4d4d;
+	background:url('../images/stripes_50.png'), url('../images/olay_bg.gif');
+	-webkit-box-shadow:0 3px 30px #333;
+    -moz-box-shadow:0 3px 30px #333;
+	box-shadow:0 3px 30px #333;
+}
+
+.a_name_label{
+	font-size:18px;
+	color:#4d4d4d;
+	margin:30px 30px 0 0;
+	float:right;
+}
+
+#a_name{
+	width:350px;
+	height:30px;
+	margin:30px 30px 0 0;
+	text-indent: 10px;
+	float:right;
+}
+
+.a_pass_label{
+	font-size:18px;
+	color:#4d4d4d;
+	margin:0 30px 0 0;
+	float:right;
+}
+
+#a_password{
+	width:350px;
+	height:30px;
+	margin:0 30px 0 0;
+	text-indent: 10px;
+	float:right;
+}
+
+.a_email_label{
+	font-size:18px;
+	color:#4d4d4d;
+	margin:0 30px 0 0;
+	float:right;
+}
+
+#a_email{
+	width:350px;
+	height:30px;
+	margin:0 30px 0 0;
+	text-indent: 10px;
+	float:right;
+}
